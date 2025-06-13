@@ -1,0 +1,7 @@
+FROM mysql:8.0
+
+#Environment variables
+ENV MYSQL_ROOT_PASSWORD = ExpenseApp@1
+
+COPY schema/*.sql /docker-entrypoint-initdb.d/
+
